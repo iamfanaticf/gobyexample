@@ -14,5 +14,5 @@ func worker(done chan bool) {
 func main() {
   done := make(chan bool)
   go worker(done)
-  fmt.Println(<-done)
+  <- done
 }
